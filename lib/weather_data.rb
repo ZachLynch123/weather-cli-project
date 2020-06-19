@@ -13,9 +13,11 @@ class GetRequester
 
     URL = 'api.openweathermap.org/data/2.5/weather?q=Lasvegas&appid=3e1f0b01ca98c6df658b5b65c8a1654a'
 
-    def initialize(url)
-        @url = url
+    attr_accessor :location
 
+    def initialize(location)
+        @location = location 
+        @url = "https://api.openweathermap.org/data/2.5/weather?q=#{@location}&appid=f0a3c1953f52f47c3b3c68881c1c7ef8"
     end
 
 
@@ -34,5 +36,5 @@ class GetRequester
 
 
 end
-x = GetRequester.new('https://api.openweathermap.org/data/2.5/weather?q=lasvegas&appid=f0a3c1953f52f47c3b3c68881c1c7ef8')
+x = GetRequester.new("location")
 x.parse_json
