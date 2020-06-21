@@ -5,17 +5,13 @@ class Display
     def initialize(data)
         @code = data["cod"]
         @condition = data["weather"][0]["main"]
-        @current_temp = data["main"]["temp"]
-        @feels_like = data["main"]["feels_like"]
-        @high = data["main"]["temp_max"]
+        @current_temp = data["main"]["temp"].to_i
+        @feels_like = data["main"]["feels_like"].to_i
+        @high = data["main"]["temp_max"].to_i
         @humidity = data["main"]["humidity"]
-        @low = data["main"]["temp_min"]
-        @wind = data["wind"]["speed"]
+        @low = data["main"]["temp_min"].to_i
+        @wind = data["wind"]["speed"].to_i
     end
-
-
-
-
 
 end
 
