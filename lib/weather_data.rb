@@ -9,7 +9,7 @@ require 'json'
 
 #class 3 will be DisplayData that formats and displays data for user to see
 
-class GetRequester
+class WeatherData
 
     URL = 'api.openweathermap.org/data/2.5/weather?q=Lasvegas&appid=3e1f0b01ca98c6df658b5b65c8a1654a'
 
@@ -30,11 +30,8 @@ class GetRequester
     def parse_json
         x = JSON.parse(self.get_response_body)
         puts x
-
     end
 
 
 
 end
-x = GetRequester.new("location")
-x.parse_json

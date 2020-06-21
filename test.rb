@@ -5,7 +5,7 @@ require 'json'
 
 # one class will be UserInput, that gets the name of the city the user wants to see and pass it to the requester
 
-# class 2 will be weather data that gets the data of the selected city and parses
+# class 2 will be weather data that gets the data of the selected city and parses json for the display 
 
 #class 3 will be DisplayData that formats and displays data for user to see
 
