@@ -1,4 +1,5 @@
 require_relative 'weather_data'
+require_relative 'display'
 repeat = true
 
 def get_city
