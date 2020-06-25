@@ -34,5 +34,7 @@ class GetRequester
 
 
 end
-x = GetRequester.new('https://api.openweathermap.org/data/2.5/weather?q=lasvegas&appid=f0a3c1953f52f47c3b3c68881c1c7ef8')
-x.parse_json
+s = "helloworld!"
+
+x = s.split(" ")
+puts x.join
