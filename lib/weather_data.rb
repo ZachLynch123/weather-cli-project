@@ -24,14 +24,14 @@ class WeatherData
             end
         end
         
-        request = ApiCall.new(@location)
-        @res = request.get_response_body
+        requests = ApiCall.new(@location)
+        @res = requests.get_response_body
         @@all << self
         return @res
     end
 
     def parse_json
-        x = JSON.parse(self.get_response_body)
+        JSON.parse(self.get_response_body)
     end
 
 

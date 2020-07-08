@@ -3,7 +3,6 @@ require_relative 'display'
 
 repeat = true
 city = ""
-choice = ""
 
 def get_city
     city = gets.chomp
@@ -12,11 +11,15 @@ def get_city
 end
 
 def get_weather_data
-    puts "Enter a city, press CTRL+C to exit program:"
+    puts "Enter a city:"
     city = get_city
     weather_data = WeatherData.new(city)
-    display_output = Display.new(weather_data.parse_json)
-    display_output.results
+    if weather_data.parse_json["cod"] == 200
+      display_output = Display.new(weather_data.parse_json)
+      display_output.results
+    else
+      puts "not found"
+    end
 end
 
 while repeat

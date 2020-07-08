@@ -1,6 +1,5 @@
 class Display
 
-    attr_reader :condition, :low, :high, :wind, :name, :current_temp, :code, :feels_like, :humidity
 
     def initialize(data)
         @code = data["cod"]
