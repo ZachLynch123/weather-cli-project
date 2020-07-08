@@ -1,5 +1,4 @@
-require 'net/http'
-require 'open-uri'
+
 require 'json'
 require_relative 'api_call'
 
@@ -25,7 +24,7 @@ class WeatherData
         end
         
         requests = ApiCall.new(@location)
-        @res = requests.get_response_body
+        @res = requests.get_response
         @@all << self
         return @res
     end
