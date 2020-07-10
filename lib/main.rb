@@ -15,8 +15,7 @@ class Main
   def get_weather_data
       puts "Enter a city. CTRL + C to exit:"
       city = get_city
-      raw_data = ApiCall.new(city)
-      weather_data = WeatherData.new(raw_data.get_response)
+      weather_data = WeatherData.new(city)
       if weather_data.parse_json["cod"] == 200
         display_output = Display.new(weather_data.parse_json)
         display_output.results
