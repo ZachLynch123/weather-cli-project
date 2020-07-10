@@ -15,13 +15,6 @@ class ApiCall
     end
 
     def get_response
-
-        @@all.each do |city|
-            if city.location == @location
-              puts "from old res"
-                return city.res
-            end
-        end
         uri = URI.parse(@url)
         responce = Net::HTTP.get_response(uri)
         @res = responce.body
