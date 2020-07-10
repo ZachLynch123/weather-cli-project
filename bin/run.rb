@@ -4,3 +4,7 @@ require_relative '../config/environment'
 'api_call'
 'display'
 require_relative '../config/environment'
+
+program = Main.new 
+
+program.run
