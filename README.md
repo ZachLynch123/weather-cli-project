@@ -8,7 +8,7 @@ Clone the code to the desired destination or download the zip directly
 
 ## Usage
 
-```python
+```
 
 Enter a city. CTRL + C to exit
 seattle
